@@ -1,15 +1,18 @@
 import Counter from '../components/Counter'
-import {addAction, minusAction} from '../actions'
+import {addAction, minusAction,addStep, minusStep} from '../actions'
 import {connect} from 'react-redux'
 // const mapStateToProps = (state) => ({
 //   counter: state.counter
 // })
 const mapStateToProps = (state) => ({
-  counter: state.counter
+  counter: state.counter,
+  step: state.step,
 })
 const mapDispatchToProps = (dispatch) => ({
   onAdd: () => dispatch(addAction()),
-  onMinus: ()=> dispatch(minusAction())
+  onMinus: ()=> dispatch(minusAction()),
+  addStep: () => dispatch(addStep()),
+  minusStep: () => dispatch(minusStep())
 })
 
 export default connect(

@@ -6,7 +6,7 @@ const counter = (state = {counter:0,step:1}, action) => {
       return {...state, counter: state.counter - state.step}
     case 'ADD_STEP':
       return {...state, step: state.step + 1}
-    case 'MINUS':
+    case 'MINUS_STEP':
       return {...state, step: state.step - 1}
     default:
       return state
